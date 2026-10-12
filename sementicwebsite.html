@@ -1,0 +1,217 @@
+<html> 
+<head> 
+<title>Department of Computer Science</title> 
+<style> 
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth} body{ font-family:Arial, sans-serif; background:#f5f8fc; 
+color:#263238; line-height:1.6; } header{ background:white; padding:18px 7%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10; box-shadow:0 2px 10px #00000012; 
+} header h1{ font-size:24px; color:#1769aa; } nav{ display:flex; gap:22px; 
+} 
+ 
+nav a{ text-decoration:none; color:#444; font-weight:bold; 
+} nav a:hover{ color:#1769aa; } section{ padding:65px 7%; 
+} h2{ text-align:center; color:#1769aa; font-size:30px; margin-bottom:30px; 
+} 
+#home{ min-height:75vh; display:flex; align-items:center; justify-content:center; text-align:center; background:linear-gradient(120deg,#eaf4ff,#ffffff); 
+} 
+.hero{ max-width:750px; 
+} .hero h2{ font-size:45px; color:#174a73; margin-bottom:15px; 
+} .hero p{ color:#555; font-size:18px; margin-bottom:25px; 
+} .btn{ display:inline-block; padding:12px 25px; background:#1769aa; color:white; text-decoration:none; border-radius:6px; 
+} 
+ 
+.btn:hover{ background:#0d4f82; 
+} 
+#about,#courses,#events{ background:white; 
+} 
+.content{ max-width:850px; margin:auto; text-align:center; color:#555; 
+} 
+.about-box{ padding:30px; background:#f5f9fd; border-left:4px solid #1769aa; 
+} 
+.grid{ max-width:1050px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; 
+} 
+.card{ background:white; padding:25px 20px; text-align:center; border-radius:8px; border:1px solid #e1e8ef; box-shadow:0 4px 12px #0000000d; 
+transition:.3s; } .card:hover{ transform:translateY(-5px); box-shadow:0 8px 18px #00000015; 
+} 
+.card h3{ 
+color:#1769aa; margin:8px 0; 
+} .card p{ color:#666; font-size:15px; 
+} 
+ 
+.icon{ font-size:32px; } #faculty{ background:#f5f8fc; 
+} 
+.table-wrap{ max-width:1000px; margin:auto; overflow-x:auto; } table{ width:100%; border-collapse:collapse; background:white; box-shadow:0 4px 15px #00000010; 
+} th,td{ padding:13px; text-align:center; border:1px solid #e2e7ec; 
+} 
+ 
+th{ background:#1769aa; color:white; } tr:nth-child(even){ background:#f5f9fd; } tr:hover{ background:#eaf4ff; 
+} 
+.contact{ max-width:600px; margin:auto; text-align:center; padding:30px; background:white; border-radius:8px; box-shadow:0 4px 15px #00000010; 
+} 
+.contact p{ margin:8px; color:#555; } 
+footer{ background:#174a73; color:white; text-align:center; padding:20px; font-size:14px; } 
+@media(max-width:750px){ header{ flex-direction:column; gap:12px; } nav{ flex-wrap:wrap; justify-content:center; gap:12px; 
+} .hero h2{ font-size:35px; } section{ padding:50px 5%; 
+} 
+} 
+</style> 
+</head> 
+<body> 
+<header> 
+<h1>Computer Science</h1> 
+<nav> 
+<a href="#home">Home</a> 
+<a href="#about">About</a> 
+<a href="#faculty">Faculty</a> 
+<a href="#courses">Courses</a> 
+<a href="#timetable">Timetable</a> 
+<a href="#events">Events</a> 
+<a href="#contact">Contact</a> 
+</nav> 
+</header> 
+<section id="home"> 
+<div class="hero"> 
+<h2>Department of Computer Science</h2> 
+<p> 
+Welcome to our department. Learn programming, explore technology and develop skills for the future. 
+</p> 
+<a href="#courses" class="btn">View Courses</a> 
+</div> 
+</section> 
+<section id="about"> 
+<h2>About Us</h2> 
+<div class="content about-box"> 
+<p> 
+Our department provides strong foundations in programming, databases, networking, Artificial Intelligence and Data Science. Students develop practical skills through projects, workshops and competitions. 
+</p> 
+</div> 
+</section> 
+<section id="faculty"> 
+<h2>Our Faculty</h2> 
+<div class="grid"> 
+<div class="card"> 
+<div class="icon">👨‍💻</div> 
+<h3>Arjun Mehta</h3> 
+<p>Professor – Python Programming</p> 
+</div> 
+<div class="card"> 
+<div class="icon">👨‍🏫</div> 
+<h3>Durga Sir</h3> 
+<p>Associate Professor – Data Science</p> 
+</div> 
+<div class="card"> 
+<div class="icon">💻</div> 
+<h3>Veera Raghav Kathula</h3> 
+<p>Assistant Professor – Frontend Frameworks</p> 
+</div> 
+<div class="card"> 
+<div class="icon">👩‍💻</div> 
+<h3>Ananya Nair</h3> 
+<p>Assistant Professor – Communication</p> 
+</div> 
+</div> 
+</section> 
+<section id="courses"> 
+<h2>Courses Offered</h2> 
+<div class="grid"> 
+<div class="card"> 
+<div class="icon">🎓</div> 
+<h3>BCA</h3> 
+<p>Duration: 3 Years</p> 
+<p>Undergraduate</p> 
+</div> 
+<div class="card"> 
+<div class="icon">💻</div> 
+<h3>B.Tech Computer Science</h3> 
+<p>Duration: 4 Years</p> 
+<p>Undergraduate</p> 
+</div> 
+<div class="card"> 
+<div class="icon">🎓</div> 
+<h3>MCA</h3> 
+<p>Duration: 2 Years</p> 
+<p>Postgraduate</p> 
+</div> 
+<div class="card"> 
+<div class="icon">📚</div> 
+<h3>M.Sc. Computer Science</h3> <p>Duration: 2 Years</p> 
+<p>Postgraduate</p> 
+</div> 
+<div class="card"> 
+<div class="icon">📊</div> 
+<h3>M.Sc. Data Science</h3> 
+<p>Duration: 2 Years</p> 
+<p>Postgraduate</p> 
+</div> 
+</div> 
+</section> 
+<section id="timetable"> 
+<h2>Weekly Timetable</h2> 
+<div class="table-wrap"> 
+<table> 
+<tr> 
+<th>Day</th> 
+<th>9-10</th> 
+<th>10-11</th> 
+<th>11-12</th> 
+<th>1-2</th> 
+</tr> 
+<tr> 
+<td>Monday</td><td>HTML</td><td>CSS</td><td>Python</td><td>AI</td> 
+</tr> 
+ 
+<tr> <td>Tuesday</td><td>Python</td><td>Database</td><td>AI</td><td>Networking</td> 
+</tr> 
+<tr> 
+<td>Wednesday</td><td>CSS</td><td>HTML</td><td>Python</td><td>Project</td> 
+</tr> 
+<tr> 
+<td>Thursday</td><td>Database</td><td>AI</td><td>Networking</td><td>Project</td> 
+</tr> 
+<tr> 
+<td>Friday</td><td>AI</td><td>Python</td><td>Database</td><td>Activity</td> 
+</tr> 
+<tr> 
+<td>Saturday</td><td>Data Science</td><td>Cyber 
+Security</td><td>Lab</td><td>Project</td> 
+</tr> 
+</table> 
+</div> 
+</section> 
+<section id="events"> 
+<h2>Upcoming Events</h2> 
+ 
+<div class="grid"> 
+<div class="card"> 
+<div class="icon">💻</div> 
+<h3>Tech Fest</h3> 
+<p>Coding, robotics and innovative projects.</p> 
+</div> 
+<div class="card"> 
+<div class="icon">💡</div> 
+<h3>Hackathon</h3> 
+<p>Build creative solutions to real-world problems.</p> 
+</div> 
+<div class="card"> 
+<div class="icon">🤖</div> 
+<h3>AI Workshop</h3> 
+<p>Learn Artificial Intelligence and Machine Learning.</p> 
+</div> 
+ 
+</div> 
+</section> 
+ 
+<section id="contact"> 
+<h2>Contact Us</h2> 
+ 
+<div class="contact"> 
+<p>📍 Department of Computer Science</p> 
+<p>📧 computer.science@example.com</p> 
+<p>📞 +91 98765 43210</p> 
+<p>🌐 www.computerscience.edu</p> 
+</div> 
+</section> 
+<footer> 
+<p>© 2026 Department of Computer Science. All Rights Reserved.</p> </footer> 
+</body> 
+</html> 
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            padding: 30px;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .input, .marks {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .input div {
+            width: 50%;
+        }
+
+        .marks div {
+            width: 33.33%;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type=text],
+        input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .options {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 11px 25px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .calculate {
+            background: #2563eb;
+            color: white;
+        }
+
+        .reset {
+            background: #ddd;
+        }
+
+        .result {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+        }
+
+        /* Remove number arrows */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Result Dashboard</h1>
+
+    <h3>Student Details</h3>
+
+    <div class="input">
+
+        <div>
+            <label>Student Name</label>
+            <input type="text" id="name">
+        </div>
+
+        <div>
+            <label>Registration No.</label>
+            <input type="number" id="reg">
+        </div>
+
+    </div>
+
+
+    <h3>Subject Marks</h3>
+
+    <div class="marks">
+
+        <div>
+            <label>HTML</label>
+            <input type="number" id="html">
+        </div>
+
+        <div>
+            <label>CSS</label>
+            <input type="number" id="css">
+        </div>
+
+        <div>
+            <label>JavaScript</label>
+            <input type="number" id="js">
+        </div>
+
+    </div>
+
+
+    <h3>Course & Specialization</h3>
+
+    <div class="options">
+
+        <b>Course:</b>
+
+        <input type="radio" name="course" value="MCA"> MCA
+        <input type="radio" name="course" value="BCA"> BCA
+
+        <br><br>
+
+        <b>Specialization:</b>
+
+        <input type="checkbox" value="AI"> AI/ML
+        <input type="checkbox" value="Cyber"> Cyber
+        <input type="checkbox" value="Data"> Data Science
+
+    </div>
+
+
+    <button class="calculate" onclick="calculate()">
+        Calculate Result
+    </button>
+
+    <button class="reset" onclick="location.reload()">
+        Reset
+    </button>
+
+
+    <div class="result" id="result">
+
+        <h3>Student Result</h3>
+
+        Result will appear here...
+
+    </div>
+
+</div>
+
+
+<script>
+
+function calculate() {
+
+    let name = document.getElementById("name").value;
+    let reg = document.getElementById("reg").value;
+
+    let html = Number(document.getElementById("html").value);
+    let css = Number(document.getElementById("css").value);
+    let js = Number(document.getElementById("js").value);
+
+    let course = document.querySelector(
+        'input[name="course"]:checked'
+    );
+
+    if (name == "" || reg == "" || !course) {
+        alert("Please fill all details");
+        return;
+    }
+
+    let total = html + css + js;
+    let percentage = total / 3;
+
+    let grade;
+
+    if (percentage >= 80)
+        grade = "A";
+    else if (percentage >= 60)
+        grade = "B";
+    else if (percentage >= 40)
+        grade = "C";
+    else
+        grade = "F";
+
+    let status = percentage >= 40 ? "PASS" : "FAIL";
+
+    document.getElementById("result").innerHTML =
+        "<h3>Student Result</h3>" +
+        "Name: " + name + "<br>" +
+        "Registration No: " + reg + "<br>" +
+        "Course: " + course.value + "<br><br>" +
+        "HTML: " + html + "<br>" +
+        "CSS: " + css + "<br>" +
+        "JavaScript: " + js + "<br><br>" +
+        "<b>Total: " + total + " / 300</b><br>" +
+        "Percentage: " + percentage.toFixed(2) + "%<br>" +
+        "Grade: " + grade + "<br>" +
+        "Result: " + status;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Dashboard</title>
+</head>
+
+<body>
+
+    <form onsubmit="Check(); return false;">
+
+        <h1>Interactive Student Result Dashboard</h1>
+
+        <label>Student Name:</label>
+        <input type="text" id="i1" required>
+        <br><br>
+
+        <label>Student Reg:</label>
+        <input type="number" id="i2" required>
+        <br><br>
+
+        <label>HTML Marks:</label>
+        <input type="number" id="i3" min="0" max="100" required>
+        <br><br>
+
+        <label>CSS Marks:</label>
+        <input type="number" id="i4" min="0" max="100" required>
+        <br><br>
+
+        <label>JS Marks:</label>
+        <input type="number" id="i5" min="0" max="100" required>
+        <br><br>
+
+        <button type="submit">Calculate Result</button>
+
+    </form>
+
+    <hr>
+
+    <div id="pare"></div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function Check() {
+
+            // Get student details
+            let n1 = document.getElementById("i1").value;
+            let n2 = document.getElementById("i2").value;
+
+            // Get marks
+            let n3 = Number(document.getElementById("i3").value);
+            let n4 = Number(document.getElementById("i4").value);
+            let n5 = Number(document.getElementById("i5").value);
+
+            // Calculate total
+            let total = n3 + n4 + n5;
+
+            // Calculate average
+            let avg = total / 3;
+
+            // Calculate percentage
+            let percentage = (total / 300) * 100;
+
+            // Calculate grade
+            let grade;
+
+            if (avg >= 80) {
+                grade = "A";
+            } 
+            else if (avg >= 60) {
+                grade = "B";
+            } 
+            else if (avg >= 40) {
+                grade = "C";
+            } 
+            else {
+                grade = "F";
+            }
+
+            // Calculate Pass / Fail
+            let status;
+
+            if (avg >= 40) {
+                status = "Pass";
+            } 
+            else {
+                status = "Fail";
+            }
+
+            // Display result
+            document.getElementById("pare").innerHTML = `
+                <h2>Student Result</h2>
+
+                <p><b>Student Name:</b> ${n1}</p>
+                <p><b>Student Reg:</b> ${n2}</p>
+                <p><b>Total Marks:</b> ${total} / 300</p>
+                <p><b>Average:</b> ${avg.toFixed(2)}</p>
+                <p><b>Percentage:</b> ${percentage.toFixed(2)}%</p>
+                <p><b>Grade:</b> ${grade}</p>
+                <p><b>Status:</b> ${status}</p>
+            `;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Reg Form</title>
+
+    <style>
+        form {
+            border: 1px solid black;
+            width: 500px;
+            margin-top: 50px;
+            margin-left: 150px;
+            background-color: rgb(120, 223, 200);
+            padding-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 4px 8px 10px black;
+        }
+
+        label {
+            padding-left: 103px;
+        }
+
+        input {
+            border-radius: 5px;
+        }
+
+        #i1 {
+            width: 200px;
+            height: 25px;
+            margin-left: 48px;
+        }
+
+        #i2 {
+            width: 200px;
+            height: 25px;
+        }
+
+        #i3 {
+            width: 200px;
+            height: 25px;
+            margin-left: 7px;
+        }
+
+        #i4 {
+            width: 201px;
+            height: 25px;
+            margin-left: 20px;
+        }
+
+        #i5 {
+            width: 202px;
+            margin-left: 38px;
+            border-radius: 5px;
+        }
+
+        #i6 {
+            width: 202px;
+            height: 25px;
+            margin-left: 15px;
+        }
+
+        #i7 {
+            width: 202px;
+            height: 25px;
+            margin-left: 45px;
+        }
+
+        #i8 {
+            width: 202px;
+            height: 25px;
+            margin-left: 52px;
+        }
+
+        #i9 {
+            width: 202px;
+            height: 25px;
+            margin-left: 29px;
+        }
+
+        #i10 {
+            width: 202px;
+            margin-left: 38px;
+        }
+
+        #b1 {
+            margin-left: 218px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-color: rgb(14, 181, 125);
+        }
+
+        #b2 {
+            border-radius: 5px;
+            background-color: rgb(223, 39, 30);
+        }
+
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <h1 style="text-align: center;">
+            Student Registration Form
+        </h1>
+
+        <label>Reg Id:</label>
+        <input type="text" id="i1" required placeholder="Enter Your Reg ID">
+        <br><br>
+
+        <label>Student Name:</label>
+        <input type="text" id="i2" required placeholder="Enter Your Name">
+        <br><br>
+
+        <label>Gender:</label>
+        Male <input type="radio" name="gender" value="Male">
+        Female <input type="radio" name="gender" value="Female">
+        Others <input type="radio" name="gender" value="Others">
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" id="i3">
+        <br><br>
+
+        <label>Phone No.:</label>
+        <input type="tel" id="i4" placeholder="Enter Phone Number">
+        <br><br>
+
+        <label>Address:</label>
+        <textarea id="i5" rows="3"></textarea>
+        <br><br>
+
+        <label>Department:</label>
+        <input type="text" id="i6" placeholder="Enter Department">
+        <br><br>
+
+        <label>Course:</label>
+        <input type="text" id="i7" placeholder="Enter Course">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" id="i8" placeholder="Enter Email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="i9" placeholder="Enter Password">
+        <br><br>
+
+        <label>Resume:</label>
+        <input type="file" id="i10">
+        <br><br>
+
+        <button type="submit" id="b1">Submit</button>
+        <button type="reset" id="b2">Reset</button>
+
+    </form>
+
+</body>
+
+</html>
