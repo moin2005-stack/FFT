@@ -1,0 +1,269 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOIN KHAN - Resume</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eeeeee;
+        color: #222;
+        margin: 0;
+        padding: 30px;
+      }
+      .resume {
+        max-width: 900px;
+        margin: auto;
+        background-color: white;
+        padding: 30px;
+        border: 1px solid #ccc;
+      }
+      .header {
+        text-align: center;
+        padding: 20px;
+        background-color: #5a87a7;
+        color: white;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 35px;
+      }
+      .header p {
+        margin: 8px 0;
+      }
+      .contact {
+        margin-top: 15px;
+      }
+      .contact a {
+        color: #6f16bd;
+        text-decoration: none;
+      }
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+      nav {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #f92b2b;
+        margin: 0 12px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #086495;
+      }
+
+      section {
+        margin-top: 30px;
+      }
+      h2 {
+        color: #870505;
+        border-bottom: 2px solid #0077b6;
+        padding-bottom: 5px;
+      }
+      p {
+        line-height: 1.6;
+      }
+
+      /* Skills */
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill {
+        background-color: #e8f4fa;
+        border: 1px solid #0077b6;
+        padding: 8px 14px;
+        border-radius: 5px;
+      }
+      .skill:hover {
+        background-color: #0077b6;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #0077b6;
+        color: white;
+      }
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+      /* Projects */
+      .project {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      .project:hover {
+        border-color: #0077b6;
+        cursor: pointer;
+      }
+      .project h3 {
+        margin-top: 0;
+        color: #333;
+      }
+      /* Project Details */
+      details {
+        margin-top: 10px;
+      }
+      summary {
+        color: #0077b6;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      /* Mobile */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .resume {
+          padding: 15px;
+        }
+        .header h1 {
+          font-size: 28px;
+        }
+        nav a {
+          display: block;
+          margin: 8px;
+        }
+        table {
+          font-size: 12px;
+        }
+        th,
+        td {
+          padding: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+      <!-- HEADER -->
+      <div class="header">
+        <h1>MOIN KHAN</h1>
+        <p>BACKEND DEVELOPER</p>
+        <div class="contact">
+          Email:
+          <a href="mailto:KMOIN3317@gmail.com">
+            KMOIN3317@GMAIL.COM@gmail.com
+          </a>
+          | Phone: +91 9887714336 | JAIPUR
+        </div>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <a href="#objective">Objective</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+      </nav>
+
+      <!-- OBJECTIVE -->
+      <section id="objective">
+        <h2>Objective</h2>
+        <p>
+          To work in a challenging environment in a position that employs my skills, utilizes my talent, and allows me 
+           to achieve excellence by improving myself with every experience.
+        </p>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2>Qualification</h2>
+        <table>
+          <tr>
+            <th>No.</th>
+            <th>EDUCATION</th>
+            <th>SUBJECT</th>
+            <th>percentage</th>
+            <th>Year</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>SHRI BALAJI PG MAHAVIDYALAYA</td>
+            <td>BCA</td>
+            <td>72%</td>
+            <td>2026</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>CAMBRIDGE PUBLIC SCHOOL</td>
+            <td>Commerce</td>
+            <td>68.9%</td>
+            <td>2023</td>
+          </tr>
+         <tr>
+            <td>3</td>
+            <td>CAMBRIDGE PUBLIC SCHOOL</td>
+            <td>10TH</td>
+            <td>75%</td>
+            <td>2021</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">JavaScript</div>
+          <div class="skill">BACKEND DEVELOPER</div>
+          <div class="skill">PROBLEM SOLVING</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">Express.js</div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <section id="certificates">
+        <h2>Certificates</h2>
+        <ul>
+          <li>C And C++ Program - Dec 2023 - Feb 2024 Samyak Institute, Jaipur</li>
+          <li>EXCEL AND TALLY - May 2023 - Jun 2023 Samyak Institute, Jaipur</li>
+
+        </ul>
+      </section>
+      <!-- HOBBIES -->
+      <section>
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Gaming</li>
+          <li>Playing outdoor games</li>
+          <li>Singing</li>
+        </ul>
+      </section>
+      <!-- DECLARATION -->
+      <section>
+        <h2>Declaration</h2>
+        <p>
+          I hereby declare that the above information is true to the best of my
+          knowledge.
+        </p>
+
+  </body>
+</html>
